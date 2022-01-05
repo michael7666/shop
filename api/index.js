@@ -17,6 +17,9 @@ const stripeRoute = require("./routes/stripe");
 const paystackRoute = require("./routes/paystack");
 
 
+
+
+
 mongoose.connect(process.env.MONGODB_URL, {
     useNewUrlParser: true, useUnifiedTopology: true
 }).then(()=>console.log("DB Connection is successful")).catch((err)=>{
@@ -35,6 +38,8 @@ app.use("/api/carts", cartRoute);
 app.use("/api/orders", orderRoute);
 app.use("/api/checkouts", stripeRoute);
 app.use("/api/paystacks", paystackRoute);
+
+
 
 app.listen(process.env.PORT || 8800,() =>{
     console.log("server is running is port 8800!");

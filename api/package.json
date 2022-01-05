@@ -19,6 +19,7 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.0.13",
     "nodemon": "^2.0.15",
+    "passport": "^0.5.2",
     "paystack-node": "^0.3.0",
     "stripe": "^8.191.0"
   }

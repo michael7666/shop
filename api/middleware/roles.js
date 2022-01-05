@@ -1,8 +1,16 @@
 
 module.exports ={
     roleManagement: {
-        admin: 'Admin',
-        moderator: 'Moderator',
-        user: 'User'
+        Admin: 'Admin',
+        Moderator: 'Moderator',
+        User: 'User'
     }
 }
+
+// enum roleManagement{
+//     Admin= 'Admin',
+//         Moderator = 'Moderator',
+//         User = 'User'
+// }
+
+// module.exports= {roleManagement}

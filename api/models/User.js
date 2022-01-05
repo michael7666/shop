@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const { roleManagement } = require("../middleware/roles");
+// const { roleManagement } = require("../middleware/roles");
 
 
 const UserSchame = new mongoose.Schema({
@@ -18,17 +18,17 @@ const UserSchame = new mongoose.Schema({
         type: String,
         required: true
     },
-    isAdmin: {
-        type: Boolean,
-        default: false
-    },
+    // isAdmin: {
+    //     type: Boolean,
+    //     default: false
+    // },
     img: {
         type: String
     },
-    roles: {
+    role: {
         type: String,
-        enum: [roleManagement.admin, roleManagement.moderator,roleManagement.user],
-        default: roleManagement.user
+        enum: ["admin", "moderator", "user"],
+        default:"user"
     }
 }, {timestamps: true});
 
