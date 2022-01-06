@@ -5,6 +5,7 @@ import { login } from "../../redux/appiCalls/appiCalls";
 import { mobile } from "../../responsive";
 import {Link, useNavigate} from "react-router-dom";
 
+
 const Container = styled.div`
  width: 100vw;
  height: 100vh;
@@ -50,6 +51,7 @@ cursor: pointer;
 color: white;
 margin: 10px;
 font-weight: 600;
+
 
 &:hover{
     background-color: burlywood;
@@ -102,6 +104,7 @@ const Login = () => {
           navigate("/");
      
     }
+
 
     return (
         <Container>

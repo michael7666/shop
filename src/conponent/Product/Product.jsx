@@ -19,7 +19,7 @@ const Product = ({cat, filters, sort}) => {
     useEffect(()=>{
        const getProducts = async() =>{
            try {
-               const res = await axios.get( cat ? `http://localhost:8800/api/products?=category${cat}`  : "http://localhost:8800/api/products");
+               const res = await axios.get( cat  `http://localhost:8800/api/products?=category${cat}`);
                setProducts(res.data);
            } catch (error) {
                console.log(error);
@@ -28,17 +28,17 @@ const Product = ({cat, filters, sort}) => {
        getProducts();
     },[cat])
 
-    // useEffect(()=>{
-    //     const getProduct = async() => {
-    //         try {
-    //             const res = await axios.get("http://localhost:8800/api/products");
-    //            setProducts(res.data);
-    //         } catch (error) {
-    //             console.log(error);
-    //         }
-    //     }
-    //     getProduct();
-    // },[])
+    useEffect(()=>{
+        const getProduct = async() => {
+            try {
+                const res = await axios.get( cat && `http://localhost:8800/api/products`);
+               setProducts(res.data);
+            } catch (error) {
+                console.log(error);
+            }
+        }
+        getProduct();
+    },[cat])
 
     useEffect(()=>{
         cat && setfilteredProducts(
